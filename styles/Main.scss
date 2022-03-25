@@ -1,0 +1,472 @@
+$primary : #430f58;
+$secondary : #6643b5;
+$tertiary: #8594e4;
+$quarternary: #d5def5; 
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: $primary;
+}
+
+#__next {
+  height: 100%;
+}
+
+.App {
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Bangers', 'Roboto', cursive, sans-serif;
+}
+
+.big-logo {
+  height: 5rem;
+}
+
+.burger {
+  margin-right: 1rem;
+  transform: scale(1.5);
+  color: $quarternary
+}
+
+.buttons {
+    font-size: x-large;
+    padding: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    border: 2px solid $quarternary;
+    background-color: $tertiary;
+
+    &:hover {
+      background-color: $quarternary;
+      border: 2px solid $tertiary;
+      color: $primary;
+    }
+
+    &:disabled {
+      pointer-events: none;
+    }
+}
+
+.container {
+  display: flex;
+  height: 90%;
+  width: 99%;
+  justify-content: space-evenly;
+  
+}
+
+.create {
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  width: 50%;
+  padding: 0.5rem 0;
+  background-color: $tertiary;
+  border-radius: 5px;
+  border: 2px solid $quarternary;
+
+  &:hover {
+    background-color: $quarternary;
+    color: $primary;
+    border: 2px solid $tertiary;
+  }
+}
+
+.delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.difficulties {
+  text-align: left;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  transition: height 250ms ease-in;
+  overflow: hidden;
+  height: 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  direction: ltr;
+  background-color: $quarternary;
+  align-items: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  :first-child {
+    width: 100%;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.file-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.form {
+  background-color: $tertiary;
+  border: 1px solid $quarternary;
+  border-radius: 10px;
+  height: 50vh;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;  
+}
+  
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 3rem;
+  justify-content: space-between;
+  border-bottom: 2px solid $quarternary;
+  width: 100%;
+  background-color: $primary;
+  position: relative;
+  
+}
+
+.jigsaw-puzzle {
+  height: 100% !important; 
+}
+
+.layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.loader {
+  border: 0.2em solid $tertiary;
+  border-top: 0.2em solid $primary;
+  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+  margin: auto;
+  animation: spin 0.6s linear infinite;
+  position: absolute;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-evenly;
+  align-items: center;
+
+  input {
+    outline: none;
+    border: 1px solid $primary;
+    font-size: large;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+
+  h1 {
+    color: $primary;
+  }
+
+  button {
+    background-color: $secondary;
+    border: 2px solid $quarternary;
+    color: $quarternary;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: large;
+
+    &:hover {
+      background-color: $quarternary;
+      color: $primary;
+      border-color: $secondary;
+    }
+  }
+}
+
+.logo {
+  margin-left: 0.5rem;
+  
+  img {
+    height: 2.5rem;
+    width: 100%
+  }
+}
+
+.main {
+  height: 100%;
+  background-color: $secondary;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 3rem;
+  z-index: 999;
+  font-size: 1.2rem;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+
+  div {
+    border: 1px solid $primary;
+    width: 100%;
+    font-weight: 600;
+    padding: 1rem 0;
+    background-color: $quarternary;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $tertiary;
+      color: $quarternary;
+    }
+  }
+}
+
+.message {
+  font-size: large;
+  font-family: 'Roboto',sans-serif;
+  color: $quarternary;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-evenly;
+  padding-bottom: 5%;
+
+  div {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  button, select {
+    font-size: large;
+    margin: 5px 0;
+  }
+
+  button {
+    width: 40%;
+  }
+}
+
+.piece-selection {
+  width: 100%;
+  display: flex;
+  padding: 0.5rem 0;
+  justify-content: space-evenly;
+  font-size: 1rem;
+  text-align: center;
+  background-color: $quarternary;
+  border-radius: 5px;
+
+  button {
+    font-size: x-large;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+.puzzle {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $tertiary;
+  background-color: $quarternary;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.puzzle-creator {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.rotateDevice {
+  display: none;
+}
+
+.saved-puzzles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 4fr));
+  grid-template-rows: auto;
+  height: fit-content;
+  width: 90%;
+  row-gap: 5rem;
+  column-gap: 5%;
+  padding: 1rem;
+  background-color: $tertiary;
+  border: 1px solid $quarternary;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+
+.saved-puzzles::-webkit-scrollbar {
+  width: 10px;
+  margin-right: 1px;
+}
+
+.saved-puzzles::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px $primary;
+  border-radius: 10px;
+}
+
+.saved-puzzles::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px $primary
+}
+
+.thumbnail {
+  position: relative;
+  height: 7rem;
+  width: 100%;
+  border: 2px double $tertiary;
+  background-color: $quarternary;
+}
+
+.thumbnail:hover .difficulties {
+  height: 70%;
+}
+
+.thumb-controls {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  svg {
+    transform: scale(2);
+    margin: 0.5rem 0;
+    color: $secondary;
+  }
+}
+
+@media(min-width:1000px) {
+  .App {
+    height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0.5rem;
+    height: 95vh;
+  } 
+
+  .create {
+    position: absolute;
+    left: 3%;
+    top: 10%;
+    width: 15%;
+    font-size: 1.2rem;
+  }
+
+  .form {
+    width: 50%;
+  }
+
+  .layout {
+    justify-content:flex-start
+  }
+
+  .menu {
+    width: 20%;
+    right: 15px;
+  }
+
+  .options {
+    order: 0;
+    width: 25%;
+    height: 30%;
+    align-items: center;
+
+    div {
+      display: block;
+      width: 100%;
+    }
+
+    select, button {
+      width: 90%;
+      border-radius: 5px;
+    }
+  }
+
+  .puzzle {
+    height: 95%;
+  }
+
+  .puzzle-creator {
+    order: 1;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .saved-puzzles {
+    width: 25%;
+    height: 80%;
+    padding: 0.5rem;
+    align-self: center;
+    column-gap: 0.5rem;
+    direction: rtl;
+    margin-right: 0.5rem;
+    margin-top: 2.5rem;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) and (orientation: landscape){
+  .main {
+    display: none;
+  }
+
+  .rotateDevice {
+    display: block;
+    margin-top: calc(50vh - 50px);
+  }
+}
+  
