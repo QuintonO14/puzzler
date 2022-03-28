@@ -60,7 +60,7 @@ const Creator = ({breakpoint, fileHandler, FileInput, finished, imageUrl, loadin
                 {!breakpoint && (<option value={10}>Extra Hard</option>)}
             </select>
             <div>
-                <button className="buttons" onClick={savePuzzle}>Save</button>
+                <button className="buttons" onClick={savePuzzle} disabled={!finished}>Save</button>
                 <button className="buttons" onClick={reset} disabled={!uploaded}>Reset</button>
             </div>
         </div>
