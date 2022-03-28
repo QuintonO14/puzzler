@@ -19,7 +19,7 @@ interface Props {
     puzzles: Puzzles[],
     user: {},
     setShow: Function,
-    setMessage: any,
+    setMessage: any
 }
 
 const Container = ({puzzles, setShow, showingPuzzle, user, setMessage} : Props) => {
@@ -112,7 +112,7 @@ const Container = ({puzzles, setShow, showingPuzzle, user, setMessage} : Props) 
      
     return (
         <>
-          {!uploaded && (
+          {!uploaded && showingPuzzle && (
             <button className="create" onClick={openFileDialog}>
               New Puzzle
             </button>)}

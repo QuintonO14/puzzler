@@ -334,9 +334,8 @@ html, body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 4fr));
   grid-template-rows: auto;
-  height: fit-content;
+  height: 80%;
   width: 90%;
-  row-gap: 5rem;
   column-gap: 5%;
   padding: 1rem;
   background-color: $tertiary;
@@ -366,6 +365,7 @@ html, body {
   width: 100%;
   border: 2px double $tertiary;
   background-color: $quarternary;
+  margin-bottom: 5rem;
 }
 
 .thumbnail:hover .difficulties {
@@ -449,8 +449,6 @@ html, body {
 
   .saved-puzzles {
     width: 25%;
-    height: 80%;
-    padding: 0.5rem;
     align-self: center;
     column-gap: 0.5rem;
     direction: rtl;
