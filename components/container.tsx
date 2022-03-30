@@ -46,8 +46,6 @@ const Container = ({puzzles, setShow, showingPuzzle, user, setMessage} : Props) 
         setLoading(true)
         const uploadedImg = URL.createObjectURL(file)
         let { url } = await uploadToS3(file);
-        console.log(uploadedImg)
-        console.log(url)
         setUploaded(true)
         setLoading(false)
         setImage(uploadedImg)

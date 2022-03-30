@@ -17,7 +17,6 @@ interface Props {
 
 const Home = ({puzzles, user} : Props) => {
   const mobileScreen = useMediaQuery(1000)
-  console.log(mobileScreen)
   const [showingPuzzle, setShow] = useState(!mobileScreen ? true : false)
   const [toggled, setToggled] = useState(false)
   const [menuItem, setItem] = useState('My Puzzles')
