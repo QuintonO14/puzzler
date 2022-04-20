@@ -70,6 +70,7 @@ const Home: NextPage = () => {
                   id="username" 
                   name="username" 
                   type="text"
+                  data-testid="username"
                   minLength={6} 
                   required
                   ref={username}
@@ -78,6 +79,7 @@ const Home: NextPage = () => {
                   id="password" 
                   name="password" 
                   type="password"
+                  data-testid="password"
                   placeholder="Password"
                   minLength={6}
                   required

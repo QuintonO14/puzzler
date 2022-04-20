@@ -42,13 +42,13 @@ const Home = ({puzzles, user} : Props) => {
           <div className="logo">
             <img src="/big-logo.png" alt="logo"/>
           </div>
-            <div className="menu" style={toggled == true ? {display: 'block'} : undefined}>
+            <div className="menu" style={toggled == true ? {display: 'block'} : {display: 'none'}}>
               {mobileScreen && (
-              <div onClick={toggle}>
+              <div onClick={toggle} className="toggle">
                 <span>{menuItem}</span>
               </div>
               )}
-              <div onClick={() => signOut()}>
+              <div onClick={() => signOut()} className="logout">
                 <span>Logout {Object.values(user)[0]}</span>
               </div>
             </div>

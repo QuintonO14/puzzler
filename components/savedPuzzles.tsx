@@ -31,8 +31,8 @@ const savedPuzzles = ({ puzzles, replayPuzzle, deletePuzzle, mobile } : Props) =
                     {!mobile && (<span>Extra:{puzzle.extrahard}</span>)}
                     </div>
                     <div className="thumb-controls">
-                    <MdReplay onClick={() => replayPuzzle(puzzle.image)} />
-                    <MdDeleteForever onClick={() => deletePuzzle(puzzle.id)} />
+                    <MdReplay className='replay' onClick={() => replayPuzzle(puzzle.image)} />
+                    <MdDeleteForever className='delete' onClick={() => deletePuzzle(puzzle.id)} />
                     </div>
                 </div>
             </div>
